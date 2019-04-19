@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: person
+  cloud:
+    config:
+      #      uri: http://localhost:8099/
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+  zipkin:
+    base-url: http://localhost:9411
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+
+devtools:
+  livereload:
+    enabled: true
+    port: 35729
+  restart:
+    enabled: true
+server:
+  port: 8002
